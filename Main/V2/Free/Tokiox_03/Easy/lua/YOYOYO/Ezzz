@@ -74,7 +74,7 @@ local function createGUI()
     -- Title
     local Title = Instance.new("TextLabel")
     Title.Name = "Title"
-    Title.Text = "Tokiox AP Spammer"
+    Title.Text = "Silent AP Spammer"
     Title.TextColor3 = Color3.fromRGB(255, 255, 255)
     Title.TextSize = 15
     Title.Font = Enum.Font.GothamBold
@@ -192,7 +192,7 @@ local function createGUI()
             player:GetPropertyChangedSignal("DisplayName"):Connect(updateInfo)
             
             -- Execute Commands on click
-            entry.InputBegan:Connect(function(input)
+            entry.InputBegan:Enum.KeyCode.ButtonY
                 if input.UserInputType == Enum.UserInputType.MouseButton1 then
                     local originalColor = info.TextColor3
                     info.TextColor3 = Color3.fromRGB(255, 200, 100)
